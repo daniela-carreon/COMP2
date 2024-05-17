@@ -1,0 +1,20 @@
+from random import randint
+
+score=0
+
+for i in range(1,11):
+    n1=randint(1,10)
+    n2=randint(1,10)
+    
+    print("Question ", i, ":")
+    ans=eval(input("What is the answer to "+ str(n1) + " x " + str(n2) + "? "))
+    answer=n1*n2
+    
+    if ans==answer:
+        print("You got the right answer.")
+        score=score+1
+    else:
+        print("You got the wrong answer.")
+        score=score+0
+        
+print("Your score is ", score , "out of 10.")
