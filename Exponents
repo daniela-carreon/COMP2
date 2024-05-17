@@ -1,0 +1,4 @@
+num= eval(input("Please enter a power: "))
+power= 2**num
+
+print("The answer is ", power%10)
