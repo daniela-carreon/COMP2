@@ -1,0 +1,32 @@
+operator1="+"
+operator2="-"
+operator3="*"
+operator4="**"
+operator5="/"
+operator="+"
+operator="-"
+operator="*"
+operator="**"
+operator="/"
+
+print("Welcome to the calculator!"),
+
+while operator==operator1 or operator==operator2 or operator==operator3 or operator==operator4 or operator==operator5:
+
+    print("Enter two numbers and an operator to perform calculation (or any symbol to exit): ")
+    x=eval(input("Enter first number: "))
+    y=eval(input("Enter second number: "))
+    operator=str(input("Enter operator (+, -, *, **, /): "))
+    
+    if operator==operator1:
+        print(x,"+",y,"=", x+y)
+    elif operator==operator2:
+        print(x,"-",y,"=", x-y)
+    elif operator==operator3:
+        print(x,"*",y,"=", x*y)
+    elif operator==operator4:
+        print(x,"**",y,"=", x**y)
+    elif operator==operator5:
+        print(x,"/",y,"=", x/y)
+    else:
+        print("Thanks for using the calculator!")
