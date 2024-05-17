@@ -1,0 +1,51 @@
+#BatobatoPick
+
+from random import choice
+
+player_score=0
+computer_score=0
+
+for i in range (5):
+    
+    game=["BATO", "PAPEL", "GUNTING"]
+
+    computer_move=choice(game)
+    
+    player=input("Choose between PAPEL, GUNTING, BATO (use capital letters only): ")
+    
+    print("Computer Move: ", computer_move)
+    
+
+    if computer_move=="BATO" and player=="PAPEL":
+        print("WIN")
+        player_score=player_score+1
+        
+    elif computer_move=="GUNTING" and player=="BATO":
+        print("WIN")
+        player_score=player_score+1
+            
+    elif computer_move=="PAPEL" and player=="GUNTING":
+        print("WIN")
+        player_score=player_score+1
+                
+    elif computer_move==player:
+        print("DRAW")
+        player_score=player_score+0
+        computer_score=computer_score+0
+            
+    else:
+        print("LOSE")
+        computer_score=computer_score+1
+        
+if player_score>computer_score:
+    print("Player's score is ", player_score)
+    print("Computer's score is ", computer_score)
+    print("Player WINS")
+elif player_score==computer_score:
+    print("Player's score is ", player_score)
+    print("Computer's score is ", computer_score)
+    print("Player and Computer are tied.")
+else:
+    print("Player's score is ", player_score)
+    print("Computer's score is ", computer_score)
+    print("Computer WINS")
