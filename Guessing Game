@@ -1,0 +1,17 @@
+from random import randint
+
+num=randint(1,20)
+
+print("This program is a guessing game! There are only 3 chances to play this game. The number is", num)
+
+for i in range (3):
+    guess=eval(input("Type your guess between 1 and 20: "))
+    if guess == num:
+        print("Congratulations, you guessed the number!")
+        break
+    else:
+        if i<2:
+            print("Oops wrong! Please try again.")
+
+if guess!=num:
+    print("Game over! The number is ", num)
